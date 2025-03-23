@@ -1,4 +1,4 @@
-const int buttonPin = 15;  // GPIO15 for the button
+const int buttonPin = 32;  // GPIO15 for the button
 const int ledPin = 2;      // Onboard LED on GPIO2
 
 void setup() {
