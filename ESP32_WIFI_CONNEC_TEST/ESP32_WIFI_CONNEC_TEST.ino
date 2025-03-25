@@ -9,6 +9,7 @@ struct WiFiCredential {
 // Add your Wi-Fi networks here
 WiFiCredential wifiList[] = {
   {"ssid", "password"},
+  {"ssid", "password"},
 };
 
 const int numNetworks = sizeof(wifiList) / sizeof(wifiList[0]);
