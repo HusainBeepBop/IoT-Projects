@@ -15,11 +15,7 @@ struct WiFiCredential {
 };
 
 WiFiCredential wifiList[] = {
-  {"RHJM 5G", "donottry@12345"},
-  {"Google Pixel 8", "easyentry"},
-  {"RHJM 4G", "donottry@12345"},
-  {"HT Nanpura", "123@@123"},
-  {"Hatimi Relay", "hatimi@5253"}
+  {"ssid", "password"},
 };
 
 const int numNetworks = sizeof(wifiList) / sizeof(wifiList[0]);
@@ -27,7 +23,7 @@ const int numNetworks = sizeof(wifiList) / sizeof(wifiList[0]);
 // MQTT server details
 const char* mqttServer = "test.mosquitto.org";
 const int mqttPort = 1883;
-const char* mqttTopic = "esp_ping";
+const char* mqttTopic = "topic_name";
 WiFiClient espClient;
 PubSubClient client(espClient);
 
@@ -35,8 +31,8 @@ PubSubClient client(espClient);
 const int buttonPin = 32;
 const int ledPin = 2;
 const int vibrationMotorPin = 4;
-const char* deviceName = "HUSAIN_ESP";
-const char* ignoredDevices[] = {"HUSAIN_ESP", }; // Add more devices as needed
+const char* deviceName = "name_ESP";
+const char* ignoredDevices[] = {"name_ESP", }; // Add more devices as needed
 
 void setup() {
   Serial.begin(9600);
