@@ -8,11 +8,7 @@ struct WiFiCredential {
 
 // Add your Wi-Fi networks here
 WiFiCredential wifiList[] = {
-  {"RHJM 5G", "donottry@12345"},
-    {"Google Pixel 8", "easyentry"},
-    {"RHJM 4G", "donottry@12345"},
-    {"HT Nanpura", "123@@123"},
-    {"Hatimi Relay", "hatimi@5253"}
+  {"ssid", "password"},
 };
 
 const int numNetworks = sizeof(wifiList) / sizeof(wifiList[0]);
