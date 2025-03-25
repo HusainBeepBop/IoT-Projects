@@ -1,17 +1,17 @@
-const int buttonPin = 32;  // GPIO15 for the button
-const int ledPin = 2;      // Onboard LED on GPIO2
+const int buttonPin = 32;  
+const int ledPin = 2;      
 
 void setup() {
-  pinMode(buttonPin, INPUT);  // Button as input
-  pinMode(ledPin, OUTPUT);    // LED as output
+  pinMode(buttonPin, INPUT);  
+  pinMode(ledPin, OUTPUT);   
 }
 
 void loop() {
-  int buttonState = digitalRead(buttonPin); // Read button state
+  int buttonState = digitalRead(buttonPin); 
 
   if (buttonState == HIGH) {
-    digitalWrite(ledPin, HIGH);  // Turn on LED if button is pressed
+    digitalWrite(ledPin, HIGH);  
   } else {
-    digitalWrite(ledPin, LOW);   // Turn off LED if button is not pressed
+    digitalWrite(ledPin, LOW);   
   }
 }
