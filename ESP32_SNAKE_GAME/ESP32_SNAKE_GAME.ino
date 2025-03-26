@@ -32,7 +32,7 @@ int joystickCenterX = 0;
 int joystickCenterY = 0;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println("SSD1306 initialization failed");
@@ -50,6 +50,7 @@ void loop() {
   if (!gameStarted) {
     if (digitalRead(SW_PIN) == LOW) {
       gameStarted = true;
+      displayStartGame();
     }
     return;
   }
@@ -84,6 +85,14 @@ void showStartScreen() {
   display.setCursor(20, 20);
   display.println("Press Button to Start");
   display.display();
+}
+
+void displayStartGame() {
+  display.clearDisplay();
+  display.setCursor(35, 30);
+  display.println("Start Game!");
+  display.display();
+  delay(1000);
 }
 
 void readJoystick() {
